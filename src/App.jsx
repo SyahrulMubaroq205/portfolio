@@ -150,7 +150,6 @@ export default function App() {
                         <li><a href="#" className="hover:text-gray-600">Home</a></li>
                         <li><a href="#about" className="hover:text-gray-600">About</a></li>
                         <li><a href="#projects" className="hover:text-gray-600">Projects</a></li>
-                        <li><a href="#contact" className="hover:text-gray-600">Contact</a></li>
                     </ul>
 
                     {/* Mobile Toggle */}
@@ -166,7 +165,6 @@ export default function App() {
                             <li><a href="#" className="hover:text-gray-600">Home</a></li>
                             <li><a href="#about" className="hover:text-gray-600">About</a></li>
                             <li><a href="#projects" className="hover:text-gray-600">Projects</a></li>
-                            <li><a href="#contact" className="hover:text-gray-600">Contact</a></li>
                         </ul>
                     </div>
                 )}
@@ -253,16 +251,16 @@ export default function App() {
                         viewport={{ once: true }}
                     >
                         <h2 className="text-3xl font-bold mb-6 text-white">About Me</h2>
-                        <p className="text-white mb-6">
-                            Saya adalah <span className="font-semibold">Fullstack Developer</span> dan mahasiswa aktif <span className="font-semibold">Teknik Informatika</span> di STT Terpadu Nurul Fikri. Saya fokus pada pengembangan web modern yang efisien dan user-friendly dengan kemampuan di frontend & backend. Saya sangat antusias dalam <span className="font-semibold">belajar teknologi baru</span>, menyelesaikan tantangan, dan membangun solusi digital.
+                        <p className="text-white mb-6 text-justify">
+                            Saya adalah seorang <span className="font-semibold">Fullstack Developer</span> dan mahasiswa aktif <span className="font-semibold">Teknik Informatika</span> di STT Terpadu Nurul Fikri. Fokus saya adalah membangun website modern yang efisien dan ramah pengguna, baik di sisi <span className="font-semibold">frontend</span> maupun <span className="font-semibold">backend</span>. Saya sangat antusias dalam <span className="font-semibold">mempelajari teknologi baru</span>.
                         </p>
 
                         <div className="mb-4">
                             <h3 className="text-xl font-semibold mb-1 flex items-center gap-2">
-                                <span>💡</span> Background
+                                <span>📘</span> Background
                             </h3>
-                            <p className="text-white/90">
-                                Saya lulusan SMK jurusan Teknik Komputer dan Jaringan, dan kini sedang menempuh pendidikan S1. Selama studi, workshop teknologi, dan project pengembangan sistem web.
+                            <p className="text-white/90 text-justify">
+                                Saya lulusan SMK dengan jurusan Teknik Komputer dan Jaringan, saya kini melanjutkan studi S1 di bidang Teknik Informatika. Selama proses belajar, saya aktif mengikuti workshop, dan membangun berbagai proyek pengembangan web.
                             </p>
                         </div>
                     </motion.div>
@@ -276,36 +274,40 @@ export default function App() {
                         viewport={{ once: true }}
                     >
                         {/* Education */}
-                        <div>
+                        <div className="mb-6">
                             <h3 className="text-xl font-semibold mb-2 flex items-center gap-2">
-                                <span>🎓</span> Education
+                                <span>🏫</span> Pendidikan
                             </h3>
-                            <ul className="space-y-3 text-white/90">
-                                <hr className="border-t-2 border-white my-4 w-80" />
-                                <li>
-                                    <div className="font-semibold">S1 Teknik Informatika</div>
-                                    <div className="text-sm text-white/70">STT Terpadu Nurul Fikri</div>
-                                    <div className="text-sm">2023 - Sekarang</div>
-                                </li>
-                                <hr className="border-t-2 border-white my-4 w-80" />
-                                <li>
-                                    <div className="font-semibold">Teknik Komputer & Jaringan</div>
-                                    <div className="text-sm text-white/70">SMK AL-JAZARI</div>
-                                    <div className="text-sm">2020 - 2023</div>
-                                </li>
-                            </ul>
+                            <div className="space-y-4 text-white/90">
+                                <div className="flex items-start gap-3">
+                                    <span className="text-white/60">📍</span>
+                                    <div>
+                                        <div className="font-bold">S1 - Teknik Informatika</div>
+                                        <div className="text-sm text-white/70">STT Terpadu Nurul Fikri</div>
+                                        <div className="text-sm italic">2023 - Sekarang</div>
+                                    </div>
+                                </div>
+                                <div className="flex items-start gap-3">
+                                    <span className="text-white/60">📍</span>
+                                    <div>
+                                        <div className="font-bold">Teknik Komputer & Jaringan</div>
+                                        <div className="text-sm text-white/70">SMK AL-JAZARI</div>
+                                        <div className="text-sm italic">2020 - 2023</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                         {/* Soft Skills */}
                         <div>
                             <h3 className="text-xl font-semibold mb-2 flex items-center gap-2">
-                                <span>🧠</span> Soft Skills
+                                <span>✨</span> Soft Skills
                             </h3>
-                            <ul className="list-disc list-inside text-white/90 space-y-1">
-                                <li>Problem Solving</li>
-                                <li>Kerja Tim & Komunikasi</li>
+                            <ul className="grid grid-cols-2 gap-x-6 text-white/90 list-[✅] list-inside">
+                                <li>Pemecahan Masalah</li>
+                                <li>Komunikasi & Kerja Tim</li>
                                 <li>Manajemen Waktu</li>
-                                <li>Adaptif dan Inisiatif</li>
+                                <li>Adaptif & Proaktif</li>
                             </ul>
                         </div>
                     </motion.div>
@@ -366,7 +368,7 @@ export default function App() {
                             <motion.div
                                 key={index}
                                 variants={projectItemVariants}
-                                className="bg-white/10 text-white rounded-3xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300 backdrop-blur-sm border border-white/10"
+                                className="bg-white/10 text-white rounded-3xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300 backdrop-blur-md md:backdrop-blur-md backdrop-blur-noneborder border-white/10"
                             >
                                 <img
                                     src={project.image}
@@ -390,95 +392,6 @@ export default function App() {
                         ))}
                     </div>
                 </motion.div>
-            </div>
-
-
-            {/* Contact */}
-            <div id="contact" className="w-full flex items-center justify-center px-4">
-                <div className="max-w-6xl w-full rounded-3xl p-8 md:p-16 shadow-xl bg-gradient-to-br from-blue-900 via-blue-600 to-indigo-500 backdrop-blur-md border border-white/10 text-white">
-
-                    {/* Judul & Deskripsi */}
-                    <h2 className="text-3xl font-bold text-center mb-2">Contact Me</h2>
-                    <p className="text-center text-white/80 mb-10">
-                        I'm always open to discussing new projects, creative ideas, or opportunities. Feel free to reach out!
-                    </p>
-
-                    {/* Grid: Form & Contact Info */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-
-                        {/* Kiri: Form */}
-                        <div>
-                            <form className="space-y-6">
-                                <div>
-                                    <label className="block mb-1 text-white/80">Your Name</label>
-                                    <input
-                                        type="text"
-                                        placeholder="Enter your name"
-                                        className="w-full bg-transparent border border-white/30 text-white placeholder-white/60 rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-cyan-400"
-                                    />
-                                </div>
-                                <div>
-                                    <label className="block mb-1 text-white/80">Your Email</label>
-                                    <input
-                                        type="email"
-                                        placeholder="Enter your email"
-                                        className="w-full bg-transparent border border-white/30 text-white placeholder-white/60 rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-cyan-400"
-                                    />
-                                </div>
-                                <div>
-                                    <label className="block mb-1 text-white/80">Your Message</label>
-                                    <textarea
-                                        rows="5"
-                                        placeholder="Write your message"
-                                        className="w-full bg-transparent border border-white/30 text-white placeholder-white/60 rounded-lg px-4 py-3 outline-none focus:ring-2 focus:ring-cyan-400 resize-none"
-                                    ></textarea>
-                                </div>
-                                <button
-                                    type="submit"
-                                    className="bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold px-6 py-3 rounded-lg shadow hover:opacity-90 transition"
-                                >
-                                    Send Message
-                                </button>
-                            </form>
-                        </div>
-
-                        {/* Kanan: Info Kontak */}
-                        <div className="flex flex-col justify-center space-y-6 text-white xl:mb-70 md:mb-56">
-                            <div className="flex flex-col justify-center space-y-6 text-white">
-                                <div className="flex items-center gap-3">
-                                    <Mail size={20} className="flex-shrink-0" />
-                                    <a href="mailto:syahrulmubaroq0505@gmail.com" className="hover:underline break-all">
-                                        syahrulmubaroq0505@gmail.com
-                                    </a>
-                                </div>
-
-                                <div className="flex items-center gap-3">
-                                    <Github size={20} className="flex-shrink-0" />
-                                    <a
-                                        href="https://github.com/SyahrulMubaroq205"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="hover:underline break-all"
-                                    >
-                                        github.com/SyahrulMubaroq205
-                                    </a>
-                                </div>
-
-                                <div className="flex items-center gap-3">
-                                    <Linkedin size={20} className="flex-shrink-0" />
-                                    <a
-                                        href="https://www.linkedin.com/in/syahrul-mubaroq-a100322a9/"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="hover:underline break-all"
-                                    >
-                                        linkedin.com/in/syahrul-mubaroq
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
 
             {/* Footer */}
