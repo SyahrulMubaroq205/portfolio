@@ -23,7 +23,7 @@ export default function App() {
             description:
                 "Website yang menampilkan informasi Global dan Indonesia tentang Covid-19 Menggunakan API eksternal untuk mendapatkan data Covid-19.",
             image: "/images/covid.png",
-            link: "https://frontend-semester4-uas-covid.vercel.app/",
+            link: "https://frontend-semester4-covid-19.vercel.app/",
         },
         {
             subtitle: "2025",
