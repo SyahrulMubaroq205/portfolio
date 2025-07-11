@@ -395,7 +395,7 @@ export default function App() {
             </div>
 
             {/* Footer */}
-            <footer className="w-full flex items-center justify-center px-4 pt-8">
+            <footer className="w-full flex items-center justify-center px-4 mt-[-24px]">
                 <div className="text-center space-y-6 max-w-6xl w-full rounded-3xl p-8 md:p-16 shadow-xl bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 backdrop-blur-md border border-white/10">
                     <div className="flex flex-wrap justify-center gap-4 sm:gap-6 text-blue-300 text-base sm:text-lg">
                         <a
