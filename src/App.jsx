@@ -244,7 +244,7 @@ export default function App() {
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
-                    viewport={{ once: true, amount: 0.2 }}
+                    viewport={{ once: false, amount: 0.2 }}
                 >
                     {/* Kolom Kiri */}
                     <motion.div
@@ -252,7 +252,7 @@ export default function App() {
                         initial={{ opacity: 0, x: -50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: false }}
                     >
                         <h2 className="text-3xl font-bold mb-6 text-white">About Me</h2>
                         <p className="text-white mb-6 text-justify">
@@ -275,7 +275,7 @@ export default function App() {
                         initial={{ opacity: 0, x: 50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6, delay: 0.2 }}
-                        viewport={{ once: true }}
+                        viewport={{ once: false }}
                     >
                         {/* Education */}
                         <div className="mb-6">
@@ -326,7 +326,7 @@ export default function App() {
                     variants={ToolscontainerVariants}
                     initial="hidden"
                     whileInView="show"
-                    viewport={{ once: true, amount: 0.2 }}
+                    viewport={{ once: false, amount: 0.2 }}
                 >
                     {/* Glow layer di belakang card */}
                     <div className="absolute -inset-1 bg-gradient-to-tr from-blue-900 via-blue-600 to-indigo-500 blur-2xl opacity-30 rounded-3xl -z-10"></div>
@@ -363,7 +363,7 @@ export default function App() {
                     variants={projectContainerVariants}
                     initial="hidden"
                     whileInView="show"
-                    viewport={{ once: true, amount: 0.2 }}
+                    viewport={{ once: false, amount: 0.2 }}
                 >
                     <h2 className="text-2xl md:text-3xl font-bold text-center mb-10 text-white">My Projects</h2>
 
