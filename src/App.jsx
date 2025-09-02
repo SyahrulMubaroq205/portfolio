@@ -125,50 +125,55 @@ export default function App() {
     }, []);
 
     return (
-        <div className="font-poppins container mx-auto sm:px-8 md:px-12 lg:px-16 xl:px-24">
+        <div className="font-poppins">
             {/* Navbar */}
-            <nav className="grid grid-cols-3 items-center bg-white rounded-lg px-4 lg:px-[42px] py-4 shadow-sm fixed top-0 left-0 right-0 z-50 backdrop-blur-md">
-                {/* Background Gradient Blur */}
-                <div className="absolute -inset-1 bg-gradient-to-tr from-blue-600 via-purple-300 to-cyan-400 blur-2xl opacity-40 rounded-3xl -z-10 animate-pulse"></div>
+            <div className="max-w-7xl mx-auto mt-4 px-4 lg:px-[42px]">
+                <nav className="grid grid-cols-3 items-center bg-white px-4 lg:px-[42px] py-4 shadow-sm fixed top-0 left-0 right-0 z-50 backdrop-blur-lg lg:rounded-2xl lg:max-w-6xl lg:mx-auto lg:mt-4">
 
-                {/* Kiri: Logo */}
-                <div>
-                    <a href="#" className="text-xl font-bold hover:text-gray-600 whitespace-nowrap">
-                        Syahrul Portfolio
-                    </a>
-                </div>
+                    {/* Background Gradient Blur */}
+                    <div className="absolute -inset-1 bg-gradient-to-tr from-blue-600 via-purple-300 to-cyan-400 blur-2xl opacity-40 rounded-3xl -z-10 animate-pulse"></div>
 
-                {/* Tengah: Ikon */}
-                <div className="flex justify-center">
-                    <Atom className="hidden md:block hover:scale-105 transition-transform duration-300" size={24} />
-                </div>
+                    {/* Kiri: Logo */}
+                    <div>
+                        <a href="#" className="text-xl font-bold hover:text-gray-600 whitespace-nowrap">
+                            Syahrul Portfolio
+                        </a>
+                    </div>
 
-                {/* Kanan: Desktop Nav / Mobile Button */}
-                <div className="flex justify-end items-center">
-                    {/* Desktop Menu */}
-                    <ul className="hidden md:flex gap-6 font-semibold">
-                        <li><a href="#" className="hover:text-gray-600">Home</a></li>
-                        <li><a href="#about" className="hover:text-gray-600">About</a></li>
-                        <li><a href="#projects" className="hover:text-gray-600">Projects</a></li>
-                    </ul>
+                    {/* Tengah: Ikon */}
+                    <div className="flex justify-center">
+                        <Atom className="hidden md:block hover:scale-105 transition-transform duration-300" size={24} />
+                    </div>
 
-                    {/* Mobile Toggle */}
-                    <button className="md:hidden" onClick={toggleMenu}>
-                        {menuOpen ? <X size={24} /> : <Menu size={24} />}
-                    </button>
-                </div>
-
-                {/* Mobile Menu */}
-                {menuOpen && (
-                    <div className="absolute top-16 left-0 w-full bg-white shadow-md rounded-b-lg z-40 md:hidden">
-                        <ul className="flex flex-col items-center gap-4 py-4 font-semibold">
+                    {/* Kanan: Desktop Nav / Mobile Button */}
+                    <div className="flex justify-end items-center">
+                        {/* Desktop Menu */}
+                        <ul className="hidden md:flex gap-6 font-semibold">
                             <li><a href="#" className="hover:text-gray-600">Home</a></li>
                             <li><a href="#about" className="hover:text-gray-600">About</a></li>
                             <li><a href="#projects" className="hover:text-gray-600">Projects</a></li>
                         </ul>
+
+                        {/* Mobile Toggle */}
+                        <button className="md:hidden" onClick={toggleMenu}>
+                            {menuOpen ? <X size={24} /> : <Menu size={24} />}
+                        </button>
                     </div>
-                )}
-            </nav>
+
+                    {/* Mobile Menu */}
+                    {menuOpen && (
+                        <div className="absolute top-16 left-0 w-full bg-white shadow-md rounded-b-lg z-40 md:hidden">
+                            <ul className="flex flex-col items-center gap-4 py-4 font-semibold">
+                                <li><a href="#" className="hover:text-gray-600">Home</a></li>
+                                <li><a href="#about" className="hover:text-gray-600">About</a></li>
+                                <li><a href="#projects" className="hover:text-gray-600">Projects</a></li>
+                            </ul>
+                        </div>
+                    )}
+                </nav>
+
+            </div>
+
 
             {/* Hero */}
             <div className="w-full flex items-center justify-center px-4 pt-28 pb-20">
@@ -231,7 +236,6 @@ export default function App() {
                     </motion.div>
                 </motion.div>
             </div>
-
 
             {/* About Me */}
             <div id="about" className="w-full flex items-center justify-center px-4 pb-20">
